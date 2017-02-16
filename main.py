@@ -19,7 +19,41 @@ def initialise_topics():
     }, {
         "name": "Grammys",
         "queries": ["#GRAMMYs", "#grammys2017"]
-    }]
+    },{
+        "name":"NMEAwards",
+        "queries":["#NMEAwards","@nme"]
+    },{
+        "name":"PS4",
+        "queries":["#ps4","#ps4pro","@Playstation","@PlayStationUK"]
+    },{
+        "name":"XBox",
+        "queries":["Xbox one","Xbox 360","@Xbox","#xbox"]
+    },{
+        "name":"Machine Learning",
+        "queries":["#ArtificialIntelligence","#machinelearning","#deeplearning","@DeepMindAI"]
+    },{
+        "name":"UEFA",
+       "queries":["UEFA","#ChampionsLeague","@Arsenal","@realmadriden","ParisSaintGermain","#Barcelona","#FCBARS","#UCL"]
+    },{
+        "name":"Fashion Week",
+        "queries":["@TwitterFashion","#FashionWeek","New York Fashion Week","London Fashion Week","Milan Fashion Week","Paris Fashion Week"]
+    },{
+        "name":"Hospital", 
+        "queries":["#hospital","#nhs","@bbctwo"]
+    },{
+        "name":"French Presidential election",
+        "queries":["French President election","Le Pen","#Hollande"]
+    },{
+        "name":"Cute Cats",
+        "queries":["#CatsOfTwitter","@Cats","#cute","#cats","#catlovers"]
+    },{
+        "name":"Beauty and the Beast", 
+        "queries":["#beautyandthebeast","#BeautyAndTheBeast","#beourguest","@beourguest","@thereallukevans","@emmawatson","#lukeevans"]
+    },{
+        "name":"Super Bowl",
+        "queries":["#SuperBowl","@SuperBowl","#SB51","#patriots"]
+    }
+]
     topics_result = dict()
     for t in topics:
         res = db.topics.insert_one(t)
