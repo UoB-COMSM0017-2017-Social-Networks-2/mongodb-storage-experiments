@@ -1,0 +1,127 @@
+{
+    "data": [{
+        "times": [{
+            "interval_start": 1487548800,
+            "sentiment": -0.2333333333333333,
+            "popularity": 6,
+            "interval_end": 1487570400
+        }, {
+            "interval_start": 1487570400,
+            "sentiment": -0.8,
+            "popularity": 1,
+            "interval_end": 1487592000
+        }, {
+            "interval_start": 1487592000,
+            "sentiment": 0.3,
+            "popularity": 1,
+            "interval_end": 1487613600
+        }, {
+            "interval_start": 1487613600,
+            "sentiment": NaN,
+            "popularity": 0,
+            "interval_end": 1487635200
+        }],
+        "topic": "Trump",
+        "locations": {
+            "12578048": {
+                "sentiment": -0.35,
+                "popularity": 2
+            },
+            "12578049": {
+                "sentiment": -0.8,
+                "popularity": 1
+            },
+            "44418": {
+                "sentiment": NaN,
+                "popularity": 0
+            },
+            "24554868": {
+                "sentiment": -0.3,
+                "popularity": 4
+            },
+            "15127": {
+                "sentiment": -0.8,
+                "popularity": 1
+            },
+            "12056": {
+                "sentiment": -0.16666666666666666,
+                "popularity": 3
+            },
+            "13963": {
+                "sentiment": -0.7,
+                "popularity": 1
+            },
+            "23424975": {
+                "sentiment": -0.23750000000000002,
+                "popularity": 8
+            }
+        }
+    }, {
+        "times": [{
+            "interval_start": 1487548800,
+            "sentiment": -0.07499999999999998,
+            "popularity": 4,
+            "interval_end": 1487570400
+        }, {
+            "interval_start": 1487570400,
+            "sentiment": -0.15000000000000002,
+            "popularity": 2,
+            "interval_end": 1487592000
+        }, {
+            "interval_start": 1487592000,
+            "sentiment": NaN,
+            "popularity": 0,
+            "interval_end": 1487613600
+        }, {
+            "interval_start": 1487613600,
+            "sentiment": 0.55,
+            "popularity": 2,
+            "interval_end": 1487635200
+        }],
+        "topic": "Valentine",
+        "locations": {
+            "12578048": {
+                "sentiment": NaN,
+                "popularity": 0
+            },
+            "12578049": {
+                "sentiment": -0.45,
+                "popularity": 2
+            },
+            "44418": {
+                "sentiment": -0.09999999999999998,
+                "popularity": 2
+            },
+            "24554868": {
+                "sentiment": 0.1,
+                "popularity": 5
+            },
+            "15127": {
+                "sentiment": -0.45,
+                "popularity": 2
+            },
+            "12056": {
+                "sentiment": 1.0,
+                "popularity": 1
+            },
+            "13963": {
+                "sentiment": -0.15,
+                "popularity": 2
+            },
+            "23424975": {
+                "sentiment": 0.0625,
+                "popularity": 8
+            }
+        }
+    }],
+    "locations": {
+        "Cardiff": 15127,
+        "Scotland": 12578048,
+        "Bath": 12056,
+        "London": 44418,
+        "Bristol": 13963,
+        "Wales": 12578049,
+        "England": 24554868,
+        "United Kingdom": 23424975
+    }
+}
