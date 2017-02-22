@@ -1,5 +1,7 @@
 import json
 
+from twitter import trends
+
 from pymongo import MongoClient
 
 mongo = MongoClient("db", 27017)
@@ -54,6 +56,11 @@ def initialise_topics():
         "queries":["#SuperBowl","@SuperBowl","#SB51","#patriots"]
     }
 ]
+    # retrieve trends in UK woeid
+    #trends = twitter.trends.place(_id = 23424975)
+    #for location in trends:
+    #    for trend in location["trends"]:
+    #        
     topics_result = dict()
     for t in topics:
         res = db.topics.insert_one(t)
