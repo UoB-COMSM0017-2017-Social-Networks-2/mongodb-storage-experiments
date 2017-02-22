@@ -1,6 +1,6 @@
 import json
 
-from twitter import trends
+#from twitter import trends
 
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
@@ -87,10 +87,13 @@ def get_topic_id(tweet, topics):
 
 
 def get_sentiment(tweet):
-    sid = SentimentIntensityAnalyser()
-    ss = sid.polarity_scores()
-    compund = ss['compound']
-    return compund
+    tweet_text = tweet['text']
+    if tweet_text is None:
+        return None
+    else:
+        ss = sid.polarity_scores(tweet_text)
+        compound = ss['compound']
+        return compound
 
 def get_location_data(tweet):
     return tweet['coordinates'] if 'coordinates' in tweet else None
