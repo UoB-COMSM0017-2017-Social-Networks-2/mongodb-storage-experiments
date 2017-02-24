@@ -1,5 +1,9 @@
 import json
 
+#from twitter import trends
+
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 from pymongo import MongoClient
 
 mongo = MongoClient("db", 27017)
@@ -54,6 +58,11 @@ def initialise_topics():
         "queries":["#SuperBowl","@SuperBowl","#SB51","#patriots"]
     }
 ]
+    # retrieve trends in UK woeid
+    #trends = twitter.trends.place(_id = 23424975)
+    #for location in trends:
+    #    for trend in location["trends"]:
+    #        
     topics_result = dict()
     for t in topics:
         res = db.topics.insert_one(t)
@@ -78,11 +87,13 @@ def get_topic_id(tweet, topics):
 
 
 def get_sentiment(tweet):
-    return {
-        "avg": .5,
-        "std": .3
-    }
-
+    tweet_text = tweet['text']
+    if tweet_text is None:
+        return None
+    else:
+        ss = sid.polarity_scores(tweet_text)
+        compound = ss['compound']
+        return compound
 
 def get_location_data(tweet):
     return tweet['coordinates'] if 'coordinates' in tweet else None
