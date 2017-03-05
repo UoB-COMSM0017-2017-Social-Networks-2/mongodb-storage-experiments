@@ -55,13 +55,29 @@ def initialise_topics():
     },{
         "name":"Super Bowl",
         "queries":["#SuperBowl","@SuperBowl","#SB51","#patriots"]
+    },{
+        "name":"Apple Special Event",
+        "queries":["@AppleSupport","apple special event","@Apple","#applenews","WWDC"]
+    },{
+        "name":"Google I/O",
+        "queries":["#GoogleIO","@Google","@googleio","google"]
+    },{
+        "name":"Billboard Music Awards",
+        "queries":["@billboard","@billboarddance","billboard"]
+    },{
+        "name":"NBA",
+        "queries":["NBA","@NBA","@NBA_Central","@NBATV"]
+    },{
+        "name":"Rugby World Cup",
+        "queries":["@rugbyworldcup","@EnglandRugby","@bbcrugbyunion"]
+    },{
+        "name":"FIFA Club World Cup",
+        "queries":["@FIFAWorldCup","@FIFAcom","#FIFA World Cup"]
+    },{
+        "name":"Oscars",
+        "queries":["#Oscars","Oscars ceremony","#Oscars2017"]
     }
-]
-    # retrieve trends in UK woeid
-    #trends = twitter.trends.place(_id = 23424975)
-    #for location in trends:
-    #    for trend in location["trends"]:
-    #        
+]       
     topics_result = dict()
     for t in topics:
         res = db.topics.insert_one(t)
