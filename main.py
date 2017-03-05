@@ -2,9 +2,8 @@ import json
 
 #from twitter import trends
 
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
 from pymongo import MongoClient
+from senti import sentiment
 
 mongo = MongoClient("db", 27017)
 db = mongo.database
@@ -88,12 +87,9 @@ def get_topic_id(tweet, topics):
 
 def get_sentiment(tweet):
     tweet_text = tweet['text']
-    if tweet_text is None:
-        return None
-    else:
-        ss = sid.polarity_scores(tweet_text)
-        compound = ss['compound']
-        return compound
+    comp = sentiment(tweet_text).compound()
+    return comp
+
 
 def get_location_data(tweet):
     return tweet['coordinates'] if 'coordinates' in tweet else None
